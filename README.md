@@ -57,3 +57,8 @@ proxy-revalidate
 
 no-store
   - 不可以缓存, 每次都要去服务端请求新的资源
+
+## 缓存验证
+
+last-modified和Etag
+当no-cache时, 首先要请求服务器进行缓存验证, 当第一次请求服务器时, 服务器会返回一个last-modifed或Etag字段, 下次请求时, 浏览器携带对应字段: if-modified-since和if-none-match. 比较如果匹配, 则返回304, 用本地缓存, 否则返回新的文件
