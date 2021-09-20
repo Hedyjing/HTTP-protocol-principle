@@ -60,5 +60,18 @@ no-store
 
 ## 缓存验证
 
-last-modified和Etag
+- last-modified和Etag
+
 当no-cache时, 首先要请求服务器进行缓存验证, 当第一次请求服务器时, 服务器会返回一个last-modifed或Etag字段, 下次请求时, 浏览器携带对应字段: if-modified-since和if-none-match. 比较如果匹配, 则返回304, 用本地缓存, 否则返回新的文件
+
+## cookie和session
+
+### cookie
+- 通过Set-Cookie设置
+- 下次请求会自动带上
+- 键值对, 可以设置多个
+#### Cookie属性
+- max-age和expires设置过期时间
+- Secure只在https的时候发送
+- 设置HttpOnly后无法通过document.cookie访问
+> 可以通过给cookie设置domain让二级域名可以访问到一级域名下设置的cookie
