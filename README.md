@@ -96,3 +96,8 @@ no-store
 
 - Content-Type字段中的boundary=----WebKitFormBoundaryjoKYZmbOBjlNzg6s是Form-data项之间的分隔
 - multipart/form-data 多数据表单提交
+
+## redirect
+- 当url变化时, 可以通过302临时跳转到新的资源
+- 302是临时跳转, 每次都要通过原来的url进行跳转
+- 301是永久跳转, 只有第一次通过原来的url跳转, 以后都用新的url请求, 从浏览器缓存中读, 服务端控制不了, 除非用户清除缓存
