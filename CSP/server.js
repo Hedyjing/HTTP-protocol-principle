@@ -13,7 +13,7 @@ http.createServer((request, response) => {
       //'Content-Security-Policy': 'default-src \'self\' https://cdn.bootcdn.net/'
       
       // 这样图片的src就不会被限制了
-      'Context-Security-Policy': 'script-src \'self\' https://cdn.bootcdn.net/'
+      'Content-Security-Policy': 'script-src \'self\' https://cdn.bootcdn.net/; report-uri /report'
     })
     response.end(html);
   }else {

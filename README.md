@@ -115,3 +115,4 @@ no-store
     - script-src
     - .......
 - 可以通过CSP中的form-action限制form表单提交的范围
+- 设置report-uri来报告策略
