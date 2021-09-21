@@ -101,3 +101,17 @@ no-store
 - 当url变化时, 可以通过302临时跳转到新的资源
 - 302是临时跳转, 每次都要通过原来的url进行跳转
 - 301是永久跳转, 只有第一次通过原来的url跳转, 以后都用新的url请求, 从浏览器缓存中读, 服务端控制不了, 除非用户清除缓存
+
+## CSP Content-Security-Policy
+- 作用
+  - 限制资源获取
+  - 报告资源获取越权
+- 限制方式
+  - default-src限制全局
+  - 限制类型
+    - connect-src
+    - img-src
+    - style-src
+    - script-src
+    - .......
+- 可以通过CSP中的form-action限制form表单提交的范围

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  This is Content
+  <script>
+    // 限制内部的script加载防止XSS注入
+    console.log('inline script')
+  </script>
+  <img src="https://robohash.org/Leanne Graham">
+  <script src='/script.js'></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</body>
+</html>
