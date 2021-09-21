@@ -81,3 +81,16 @@ no-store
 - 一个Connection Id对应一个TCP连接
 - http2.0后一个tcp可以并发的请求多个http连接(同域), 可以看google的connection id
 - connection默认为keep-alive
+
+## 数据协商
+- 客户端请求
+  - Accept指定客户端想要的数据类型
+  - Accept-Encoding 指定数据以什么编码方式传输
+  - Accept-Language 指定语言
+  - User-Agent 表示浏览器的相关信息
+- 服务端返回
+  - Content-Type 
+  - Content-Encoding
+  - Content-Language
+- DevTools中size上面的大小是传输过程中整个数据的大小(包括首行, header和body), 下面的是body解压后的实际大小. 下面的body是上面的body解压后的结果
+
