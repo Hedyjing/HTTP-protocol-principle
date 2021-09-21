@@ -75,3 +75,9 @@ no-store
 - Secure只在https的时候发送
 - 设置HttpOnly后无法通过document.cookie访问
 > 可以通过给cookie设置domain让二级域名可以访问到一级域名下设置的cookie
+
+## HTTP长链接
+- 浏览器最多允许对同一个 Host 建立六个 TCP 连接(并发数为6)
+- 一个Connection Id对应一个TCP连接
+- http2.0后一个tcp可以并发的请求多个http连接(同域), 可以看google的connection id
+- connection默认为keep-alive
