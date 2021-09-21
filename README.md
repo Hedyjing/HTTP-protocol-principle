@@ -94,3 +94,5 @@ no-store
   - Content-Language
 - DevTools中size上面的大小是传输过程中整个数据的大小(包括首行, header和body), 下面的是body解压后的实际大小. 下面的body是上面的body解压后的结果
 
+- Content-Type字段中的boundary=----WebKitFormBoundaryjoKYZmbOBjlNzg6s是Form-data项之间的分隔
+- multipart/form-data 多数据表单提交

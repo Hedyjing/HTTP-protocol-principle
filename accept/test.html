@@ -8,6 +8,23 @@
 </head>
 <body>
   hello world
+  <form action="/form" id='form' method="POST" enctype="multipart/form-data">
+    <input type="text" name='name'>
+    <input type="password" name='password'>
+    <input type="file" name='file'>
+    <input type="submit">
+  </form>
+  <script>
+    let form = document.getElementById('form');
+    form.addEventListener('submit', e=> {
+      e.preventDefault();
+      let formData = new FormData(form);
+      fetch('/form', {
+        method: 'POST',
+        body: formData
+      })
+    })
+  </script>
 </body>
 
 </html>
